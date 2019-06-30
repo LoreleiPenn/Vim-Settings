@@ -4,7 +4,9 @@ This configuration repository was created under `~/.config/nvim` with the idea t
  - Then `cd` into `~/.config/nvim`.
  - And execute `git clone git@github.com:LoreleiLVNH/Vim-Settings.git .`
 ## Neovim
-For neovim, this should be all in order for it to install the plugins and read my configuration.
-
+For neovim, this should be all in order for it to install the plugins and read my configuration. The following files are Neovim configuration:
+ - init.vim (Most common settings, setup and sourcing of personal settings).
+ - ginit.vim (for loading options concerning the GUI).
+ - local_init.vim (where most personal settings are written).
 ## Vim
 For vim, I am using `vimrc` and `vimrc.local` as hardlinks for `~/.vimrc` and `~/.vimrc.local`. So after cloning the code, a hardlink must be made so that Vim detects the configuration and install the plugins.

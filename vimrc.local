@@ -1,1 +1,9 @@
-/home/Lorelei/.vimrc.local
+if has("gui_running")
+    set lines=35 columns=150
+    set guifont=CodeNewRoman\ Nerd\ Font\ Mono\ 14
+    set guifontwide=VL\ Gothic\ 13
+endif
+
+map <leader>s :source ~/.vimrc<cr>
+map <leader>w :w!<cr>
+

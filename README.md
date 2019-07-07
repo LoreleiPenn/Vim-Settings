@@ -4,7 +4,7 @@ This configuration repository was created under `~/.config/nvim` with the idea t
  - Then `cd` into `~/.config/nvim`.
  - And execute
    ```shell
-   git clone git@github.com:LoreleiLVNH/Vim-Settings.git .
+   git clone git@github.com:LoreleiPenn/Vim-Settings.git .
    ```
 ## Neovim
 For neovim, this should be all in order for it to install the plugins and read my configuration. The following files are Neovim configuration:

@@ -38,10 +38,14 @@ function! s:VSetSearch(cmdtype)
 endfunction
 
 " Syntastic stuff BEGIN
-let g:syntastic_cpp_checkers = ['clang++', 'gcc']
+let g:syntastic_cpp_checkers = ['clang_tidy', 'clang++', 'gcc']
 let g:syntastic_cpp_compiler = 'clang++'
 " let g:syntastic_cpp_compiler_options = ' -std=c++17 -stdlib=libc++'
 let g:syntastic_cpp_compiler_options = ' -std=c++17'
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_auto_refresh_includes = 1
+" let g:syntastic_cpp_clang_tidy_args = '-checks=*'
+let g:syntastic_cpp_clang_tidy_args = ''
 let g:syntastic_python_checkers=['python', 'flake8']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 " let g:syntastic_go_checkers = ['golint', 'govet']

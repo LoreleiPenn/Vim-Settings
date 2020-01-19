@@ -1,4 +1,3 @@
-
 let g:python_host_prog  = "/usr/bin/python2"
 let g:python3_host_prog = "/usr/bin/python"
 
@@ -32,7 +31,26 @@ function! s:VSetSearch(cmdtype)
     let @s = temp
 endfunction
 
-" let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++17 -stdlib=libc++'
+" Syntastic stuff BEGIN
+let g:syntastic_cpp_checkers = ['clang++', 'gcc']
+let g:syntastic_cpp_compiler = 'clang++'
+" let g:syntastic_cpp_compiler_options = ' -std=c++17 -stdlib=libc++'
+let g:syntastic_cpp_compiler_options = ' -std=c++17'
+let g:syntastic_python_checkers=['python', 'flake8']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+" let g:syntastic_go_checkers = ['golint', 'govet']
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_style_warning_symbol = '⚠'
+let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_error_symbol='✗'
+let g:syntastic_always_populate_loc_list=1
+let g:airline#extensions#syntastic#enabled = 1
+" Syntastic stuff END
 
+" Tab settings
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
 set noexpandtab

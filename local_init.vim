@@ -31,3 +31,8 @@ function! s:VSetSearch(cmdtype)
     let @/ = '\V' . substitute(escape(@s, a:cmdtype.'\'), '\n', '\\n', 'g')
     let @s = temp
 endfunction
+
+" let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++17 -stdlib=libc++'
+
+set noexpandtab

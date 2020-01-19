@@ -8,7 +8,7 @@ cd $NVIM_HOME
 echo "Cloning LoreleiPenn/Vim-Settings..."
 git clone git@github.com:LoreleiPenn/Vim-Settings.git
 echo "Making hardlinks for Vim files..."
-VIM_FILES=('vimrc', 'vimrc.local')
+VIM_FILES=('vimrc', 'vimrc.local', 'vimrc.local.bundles')
 for file in VIM_FILES; do
     ln file ~/.{file}
 done

@@ -1,7 +1,8 @@
 if has("gui_running")
     set lines=35 columns=150
-    set guifont=CodeNewRoman\ Nerd\ Font\ Mono\ 14
-    set guifontwide=VL\ Gothic\ 13
+    " set guifont=CodeNewRoman\ Nerd\ Font\ Mono\ 14
+	set guifont=Hack\ Nerd\ Font\ Mono\ 10
+    set guifontwide=VL\ Gothic\ 10
 endif
 
 let g:python_host_prog  = "/usr/bin/python2"
@@ -15,7 +16,7 @@ map <leader>s :w!<CR>
 "set guifontwide=VL\ Gothic\ 13
 
 set number relativenumber
-"set mouse=a
+set mouse=a
 
 " Disable arrow keys for training.
 " noremap <Up>    <Nop>

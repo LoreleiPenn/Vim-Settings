@@ -1,9 +1,23 @@
-" vim-bootstrap 
+" vim-bootstrap
 
+let $config_home='~/.vim'
+let $config_home_file='~/.'
+if has("windows")
+	let $config_home='~/vimfiles'
+	let $config_home_file='~/_'
+	source $VIMRUNTIME/vimrc_example.vim
+	source $VIMRUNTIME/mswin.vim
+	set renderoptions=type:directx,level:0.75,gamma:1.25,contrast:0.25,geom:1,renmode:5,taamode:1
+endif
+let $vim_autoload_plug_path=$config_home . '/autoload/plug.vim'
+let $vim_plugged_path=$config_home . '/plugged'
+let $session_dir_path=$config_home . '/session'
+let $local_bundles_path=$config_home_file . 'vimrc.local.bundles'
+let $local_init_path=$config_home_file . 'vimrc.local'
 "*****************************************************************************
 "" Vim-PLug core
 "*****************************************************************************
-let vimplug_exists=expand('~/.vim/autoload/plug.vim')
+let vimplug_exists=expand($vim_autoload_plug_path)
 
 let g:vim_bootstrap_langs = "c,elixir,haskell,html,javascript,perl,php,python,ruby,scala,typescript"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
@@ -22,7 +36,7 @@ if !filereadable(vimplug_exists)
 endif
 
 " Required:
-call plug#begin(expand('~/.vim/plugged'))
+call plug#begin(expand($vim_plugged_path))
 
 "*****************************************************************************
 "" Plug install packages
@@ -129,7 +143,9 @@ Plug 'ecomba/vim-ruby-refactoring'
 " scala
 if has('python')
     " sbt-vim
-    Plug 'ktvoelker/sbt-vim'
+	if !has("windows")
+	    Plug 'ktvoelker/sbt-vim'
+	endif
 endif
 " vim-scala
 Plug 'derekwyatt/vim-scala'
@@ -144,8 +160,8 @@ Plug 'HerringtonDarkholme/yats.vim'
 "*****************************************************************************
 
 "" Include user's extra bundle
-if filereadable(expand("~/.vimrc.local.bundles"))
-  source ~/.vimrc.local.bundles
+if filereadable(expand($local_bundles_path))
+  source $local_bundles_path
 endif
 
 call plug#end()
@@ -193,7 +209,7 @@ else
 endif
 
 " session management
-let g:session_directory = "~/.vim/session"
+let g:session_directory = $session_dir_path
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
@@ -619,8 +635,8 @@ let g:yats_host_keyword = 1
 "*****************************************************************************
 
 "" Include user's local vim config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
+if filereadable(expand($local_init_path))
+  source $local_init_path
 endif
 
 "*****************************************************************************

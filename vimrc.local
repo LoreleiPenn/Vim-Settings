@@ -3,10 +3,32 @@ if has("gui_running")
     " set guifont=CodeNewRoman\ Nerd\ Font\ Mono\ 14
 	set guifont=Hack\ Nerd\ Font\ Mono\ 10
     set guifontwide=VL\ Gothic\ 10
+	if has("windows")
+		set guifont=Hack_Nerd_Font_Mono:h10
+		set guifontwide=MS\ Gothic:h10
+	endif
 endif
 
-let g:python_host_prog  = "/usr/bin/python2"
+" let g:python_host_prog  = "/usr/bin/python2"
 let g:python3_host_prog = "/usr/bin/python"
+if has("windows")
+    let g:python3_host_prog = "~/Miniconda3/python.exe"
+	set shell=cmd.exe
+endif
+
+"if has("windows")
+"    set shell=C:\Windows\System32\wsl
+"    set shellpipe=\|tee.exe
+"    set shellpipe=2\>\&1\|tee.exe\ \"%s\"
+"    set shellredir=>
+"    set shellcmdflag=
+"    set shellxquote=
+"    set noshellslash
+"    set shelltemp
+"    set grepprg=grep\ -n\ $*\ /dev/null
+"    let g:syntastic_shell="C:\\Windows\\System32\\cmd.exe /s /c"
+"endif
+
 
 "map <leader>s :source ~/.config/nvim/init.vim<CR>
 map <leader>w :w!<CR>

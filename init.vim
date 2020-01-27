@@ -1,6 +1,6 @@
-" vim-bootstrap 
+" vim-bootstrap
 let $config_home='~/.config'
-if has('win32')
+if has("windows")
   let $config_home='~/AppData/Local'
 endif
 let $vim_autoload_plug_path=$config_home . '/nvim/autoload/plug.vim'

@@ -7,3 +7,5 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " C++
 Plug 'bfrg/vim-cpp-modern'
+" Julia
+Plug 'JuliaEditorSupport/julia-vim'

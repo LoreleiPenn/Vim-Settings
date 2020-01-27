@@ -16,6 +16,8 @@ For vim, I am using `vimrc` and `vimrc.local` as hardlinks for `~/.vimrc` and `~
 ## Setup Script
 There is a script for automating the setup of these settings. For running such script, execute
 ```zsh
-sh -c "$(curl -pfsSL https://raw.githubusercontent.com/LoreleiPenn/Vim-Settings/master/setup-vim-config.sh)"
+	sh -c "$(curl -pfsSL https://raw.githubusercontent.com/LoreleiPenn/Vim-Settings/master/setup-vim-config.sh)"
 ```
 and it will do the instructions mentioned prior to this point.
+## Font
+These configuration files use `Hack Nerd Font Mono` as the font for the Vim and Neovim GUI. Make sure to install it from `https://github.com/ryanoasis/nerd-fonts`.

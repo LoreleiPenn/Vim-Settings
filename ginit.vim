@@ -9,6 +9,7 @@
 "set guifont=CodeNewRoman\ Nerd\ Font\ Mono\ 14
 "set guifontwide=VL\ Gothic\ 13
 
-GuiFont! SauceCodePro Nerd Font Mono:h12
+" GuiFont! SauceCodePro Nerd Font Mono:h12
+GuiFont! Hack Nerd Font Mono:h10
 
 GuiTabline 0

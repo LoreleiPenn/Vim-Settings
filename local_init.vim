@@ -13,7 +13,7 @@ map <leader>s :w!<CR>
 "set guifontwide=VL\ Gothic\ 13
 
 set number relativenumber
-set mouse=a
+" set mouse=a
 
 " Disable arrow keys for training.
 noremap <Up>    <Nop>

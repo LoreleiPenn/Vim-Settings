@@ -2,7 +2,7 @@
 
 let $config_home='~/.vim'
 let $config_home_file='~/.'
-if has("windows")
+if has("win32")
 	let $config_home='~/vimfiles'
 	let $config_home_file='~/_'
 	source $VIMRUNTIME/vimrc_example.vim
@@ -143,7 +143,7 @@ Plug 'ecomba/vim-ruby-refactoring'
 " scala
 if has('python')
     " sbt-vim
-	if !has("windows")
+	if !has("win32")
 	    Plug 'ktvoelker/sbt-vim'
 	endif
 endif

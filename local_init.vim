@@ -1,6 +1,6 @@
 let g:loaded_python_provider = 0
 let g:python3_host_prog = "/usr/bin/python"
-if has("windows")
+if has("win32")
     let g:python3_host_prog = "~/Miniconda3/python.exe"
     set shell=cmd.exe
 endif

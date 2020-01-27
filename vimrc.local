@@ -3,7 +3,7 @@ if has("gui_running")
     " set guifont=CodeNewRoman\ Nerd\ Font\ Mono\ 14
 	set guifont=Hack\ Nerd\ Font\ Mono\ 10
     set guifontwide=VL\ Gothic\ 10
-	if has("windows")
+	if has("win32")
 		set guifont=Hack_Nerd_Font_Mono:h10
 		set guifontwide=MS\ Gothic:h10
 	endif
@@ -11,12 +11,12 @@ endif
 
 " let g:python_host_prog  = "/usr/bin/python2"
 let g:python3_host_prog = "/usr/bin/python"
-if has("windows")
+if has("win32")
     let g:python3_host_prog = "~/Miniconda3/python.exe"
 	set shell=cmd.exe
 endif
 
-"if has("windows")
+"if has("win32")
 "    set shell=C:\Windows\System32\wsl
 "    set shellpipe=\|tee.exe
 "    set shellpipe=2\>\&1\|tee.exe\ \"%s\"

@@ -1,9 +1,19 @@
 " vim-bootstrap 
+let $config_home='~/.config'
+if has('win32')
+  let $config_home='~/AppData/Local'
+endif
+let $vim_autoload_plug_path=$config_home . '/nvim/autoload/plug.vim'
+let $vim_plugged_path=$config_home . '/nvim/plugged'
+let $session_dir_path=$config_home . '/nvim/session'
+let $local_bundles_path=$config_home . '/nvim/local_bundles.vim'
+let $local_init_path=$config_home . '/nvim/local_init.vim'
 
 "*****************************************************************************
 "" Vim-PLug core
 "*****************************************************************************
-let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
+
+let vimplug_exists=expand($vim_autoload_plug_path)
 
 let g:vim_bootstrap_langs = "c,elixir,haskell,html,javascript,perl,php,python,ruby,scala,typescript"
 let g:vim_bootstrap_editor = "nvim"				" nvim or vim
@@ -22,7 +32,7 @@ if !filereadable(vimplug_exists)
 endif
 
 " Required:
-call plug#begin(expand('~/.config/nvim/plugged'))
+call plug#begin(expand($vim_plugged_path))
 
 "*****************************************************************************
 "" Plug install packages
@@ -144,8 +154,8 @@ Plug 'HerringtonDarkholme/yats.vim'
 "*****************************************************************************
 
 "" Include user's extra bundle
-if filereadable(expand("~/.config/nvim/local_bundles.vim"))
-  source ~/.config/nvim/local_bundles.vim
+if filereadable(expand($local_bundles_path))
+  source $local_bundles_path
 endif
 
 call plug#end()
@@ -193,7 +203,7 @@ else
 endif
 
 " session management
-let g:session_directory = "~/.config/nvim/session"
+let g:session_directory = $session_dir_path
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
@@ -607,8 +617,8 @@ let g:yats_host_keyword = 1
 "*****************************************************************************
 
 "" Include user's local vim config
-if filereadable(expand("~/.config/nvim/local_init.vim"))
-  source ~/.config/nvim/local_init.vim
+if filereadable(expand($local_init_path))
+  source $local_init_path
 endif
 
 "*****************************************************************************

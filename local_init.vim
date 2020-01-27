@@ -1,5 +1,9 @@
-let g:python_host_prog  = "/usr/bin/python2"
+" let g:python_host_prog  = "/usr/bin/python2"
 let g:python3_host_prog = "/usr/bin/python"
+if has('win32')
+    let g:python3_host_prog = "~/Miniconda3/python.exe"
+    set shell=cmd.exe
+endif
 
 "map <leader>s :source ~/.config/nvim/init.vim<CR>
 map <leader>w :w!<CR>

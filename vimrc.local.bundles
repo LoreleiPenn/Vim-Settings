@@ -9,3 +9,5 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'bfrg/vim-cpp-modern'
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
+" Dracula colour scheme
+Plug 'dracula/vim', {'as': 'dracula'}

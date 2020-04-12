@@ -8,6 +8,8 @@ endif
 "map <leader>s :source ~/.config/nvim/init.vim<CR>
 map <leader>w :w!<CR>
 map <leader>s :w!<CR>
+map <leader>m :lnext<CR>
+" map <leader>m :lprev<CR>
 
 "set guifont=CodeNewRoman\ Nerd\ Font\ Mono\ 14
 "set guifontwide=VL\ Gothic\ 13
@@ -57,8 +59,18 @@ let g:syntastic_always_populate_loc_list=1
 let g:airline#extensions#syntastic#enabled = 1
 " Syntastic stuff END
 
+" Colour scheme
+silent! colorscheme dracula
+
 " Tab settings
 set tabstop=4
 set softtabstop=0
 set shiftwidth=4
-set noexpandtab
+set expandtab
+
+augroup vimrc-python
+  autocmd!
+  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=160
+      \ formatoptions+=croq softtabstop=4
+      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+augroup END

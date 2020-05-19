@@ -60,7 +60,10 @@ let g:airline#extensions#syntastic#enabled = 1
 " Syntastic stuff END
 
 " Colour scheme
-silent! colorscheme dracula
+" silent! colorscheme dracula
+" let g:airline_theme='dracula'
+silent! colorscheme nord
+let g:airline_theme='nord'
 
 " Tab settings
 set tabstop=4

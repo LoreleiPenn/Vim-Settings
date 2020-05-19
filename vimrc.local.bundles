@@ -11,3 +11,4 @@ Plug 'bfrg/vim-cpp-modern'
 Plug 'JuliaEditorSupport/julia-vim'
 " Dracula colour scheme
 Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'arcticicestudio/nord-vim'

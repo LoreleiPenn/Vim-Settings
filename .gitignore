@@ -2,3 +2,5 @@
 autoload
 plugged
 session
+# Ignore ginit.vim
+ginit.vim

@@ -1,3 +1,4 @@
+let g:indentLine_concealcursor = 'nc'
 let g:loaded_python_provider = 0
 let g:python3_host_prog = "/usr/bin/python"
 if has("win32")

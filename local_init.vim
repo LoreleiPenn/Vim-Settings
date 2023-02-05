@@ -5,6 +5,9 @@ if has("win32")
     let g:python3_host_prog = "~/Miniconda3/python.exe"
     set shell=cmd.exe
 endif
+if has("termux")
+    let g:python3_host_prog = "/data/data/com.termux/files/usr/bin/python"
+endif
 
 "map <leader>s :source ~/.config/nvim/init.vim<CR>
 map <leader>w :w!<CR>

@@ -10,6 +10,7 @@ Plug 'bfrg/vim-cpp-modern'
 " Julia
 Plug 'JuliaEditorSupport/julia-vim'
 " Dracula colour scheme
+" Plug 'github/copilot.vim'
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'arcticicestudio/nord-vim'
 Plug 'github/copilot.vim'

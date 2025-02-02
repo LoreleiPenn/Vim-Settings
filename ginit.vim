@@ -10,6 +10,9 @@
 "set guifontwide=VL\ Gothic\ 13
 
 " GuiFont! SauceCodePro Nerd Font Mono:h12
-GuiFont! Hack Nerd Font Mono:h10
-
-GuiTabline 0
+if exists("g:neovide")
+    set guifont=Hack\ Nerd\ Font\ Mono:h10
+else
+    GuiFont! Hack Nerd Font Mono:h10
+    GuiTabline 0
+endif

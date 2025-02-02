@@ -13,3 +13,4 @@ Plug 'JuliaEditorSupport/julia-vim'
 " Plug 'github/copilot.vim'
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'arcticicestudio/nord-vim'
+Plug 'github/copilot.vim'

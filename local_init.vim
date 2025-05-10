@@ -1,8 +1,11 @@
 let g:indentLine_concealcursor = 'nc'
 let g:loaded_python_provider = 0
-let g:python3_host_prog = "/usr/bin/python"
+if has("unix")
+    let g:python3_host_prog = "/usr/bin/python"
+endif
 if has("win32")
-    let g:python3_host_prog = "~/Miniconda3/python.exe"
+    " let g:python3_host_prog = "~/AppData/Local/Microsoft/WindowsApps/python.exe"
+    let g:python3_host_prog = "~/AppData/Local/Programs/Python/Python313/python.exe"
     set shell=cmd.exe
 endif
 if has("termux")
